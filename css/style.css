@@ -1,0 +1,337 @@
+/** Global **/
+body, menu, input, p, a, h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.25rem;
+}
+
+/** Header **/
+header > section:nth-child(2) {
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #d1d5db;
+    gap: 5rem;
+    padding-bottom: 1rem;
+    margin: 1rem 3rem;
+}
+
+header > section div:nth-child(1), header > section img {
+    height: 100%;
+    width: auto;
+}
+
+header > section > label {
+    width: 100%;
+    border: 2px solid #d1d5db;
+    padding: 1rem;
+}
+
+header > section > label > input {
+    border: 0;
+    outline-width: 0px;
+}
+
+header > section > label > i {
+    margin-right: 0.625rem;
+}
+
+header > section > div:nth-child(3) {
+    display: flex;
+    gap: 2.5rem;
+    font-size: 1.875rem;
+}
+
+header > section > div:nth-child(3) i {
+    font-size: 1.875rem;
+}
+
+.category {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1.5rem 3rem;
+}
+
+.category div {
+    text-align: center;
+}
+
+.category img {
+    width: 3.5rem;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+/** Navigation Header **/
+header nav {
+    height: 4rem;
+    background-color: #12005e;
+}
+
+header menu {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+
+header menu a {
+    color: white;
+    text-decoration: none;
+}
+
+/** Main Homepage **/
+/** Hero Section **/
+.home .hero {
+    background-color: #12005e;
+    padding: 4rem 3rem;
+}
+
+.home .hero h2 {
+    color: #73efb4;
+    font-size: 3.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.home .hero p {
+    color: #ffffff;
+    font-size: 0.875rem;
+    margin-bottom: 2.25rem;
+}
+
+.home .hero > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home .hero > div > div {
+    width: 50%;
+}
+
+.home .hero > div > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+}
+
+.home .hero > div > div:nth-child(2) > div {
+    width: 300px;
+    position: relative;
+}
+
+.home .hero > div > div:nth-child(2) > div > img {
+    width: 100%;
+    height: auto;
+}
+
+.home .hero > div > div:nth-child(2) > div > div {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    top: -1.75rem;
+    left: -5rem;
+    padding: 0.625rem 2rem;
+    border-radius: 100px;
+    font-weight: 900;
+}
+
+.home .hero > div > div:nth-child(2) > div > div > span:nth-child(1) {
+    letter-spacing: 0.1rem;
+}
+
+.home .hero > div > div:nth-child(2) > div > div > span:nth-child(2) {
+    display: flex;
+    justify-content: center;
+}
+
+.home .hero > div > div:nth-child(2) > div > div > span:nth-child(2) a {
+    font-size: 3.75rem;
+}
+
+.home .hero > div > div:nth-child(1) > div {
+    display: flex;
+    gap: 2rem;
+}
+
+.home .hero > div > div:nth-child(1) > div > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    border-radius: 1.5rem;
+    color: #ffffff;
+    font-weight: bold; 
+    padding: 1rem 2rem;
+}
+
+.home .hero > div > div:nth-child(1) > div > div > span:nth-child(2) {
+    color: #73efb4;
+    font-size: 3.75rem;
+}
+
+.home .hero > div > div:nth-child(1) > div > div > span:nth-child(1) {
+    font-size: 1rem;
+}
+
+.home .hero .time span:nth-child(2) {
+    font-size: 1.5rem !important;
+}
+
+.home .hero .time span:nth-child(3) {
+    font-size: 2.25rem;
+}
+
+/** Product section **/
+.home .product {
+    margin: 10rem 3rem;
+}
+
+.home .product > div {
+    display: flex;
+    gap: 2.5rem;
+    overflow: scroll;
+}
+
+.home .product h3 {
+    text-align: center;
+    font-size: 4.5rem;
+    margin-bottom: 4rem;
+}
+
+.home .product > div > div > div:nth-child(2) {
+    height: 18vw;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 999px;
+    padding: 0 20%;
+    margin: 2rem;
+}
+
+.home .product > div > div > div:nth-child(3) {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home .product > div > div > div:nth-child(3) > span:nth-child(1) {
+    font-weight: bold;
+}
+
+.home .product > div > div > span {
+    color: #ed5068;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+}
+
+.home .product > div img {
+    width: 100%;
+    height: auto;
+}
+
+.home .product > div > div {
+    flex: 0 0 25%;
+    background-color: #b6cee6;
+    padding: 1.25rem;
+}
+
+/** About Secction **/
+.home .about {
+    background: url('../img/about us.jpg');
+    color: #ffffff;
+    text-align: center;
+    padding: 3rem;
+}
+
+.home .about h3 {
+    color: white;
+    font-size: 3.75rem;
+}
+
+.home .about h3 > span {
+    color: #f9c75c;
+}
+
+/** Footer **/
+footer {
+    background-color: #dee8f6;
+}
+
+footer > section:nth-child(1) {
+    height: 14rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 0 1rem 0;
+    margin: 0 3rem;
+    border-bottom: 2px solid #d1d5db;
+}
+
+footer > section:nth-child(1) > div:nth-child(1) {
+    height: 100%;
+}
+
+footer > section:nth-child(1) img {
+    height: 100%;
+    width: auto;
+}
+
+footer h4 {
+    color: #12005e;
+    margin-bottom: 1.75rem;
+    font-size: 1.875rem;
+}
+
+footer menu {
+    list-style: none;
+    padding: 0;
+}
+
+footer menu > li {
+    margin: 0.5rem 0;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+}
+
+footer form label{
+    width: 100%;
+    color: #12005e;
+    font-weight: bold;
+}
+
+footer form input[type="email"]{
+    width: 16rem;
+    padding: 0.75rem;
+    border: 2px solid #d1d5db;
+    outline-width: 0px;
+    font-size: 1rem;
+}
+
+footer form input[type="submit"]{
+    background-color: #12005e;
+    color: #ffffff;
+    border: 0px;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+footer > section:nth-child(2) {
+    text-align: center;
+    padding: 1rem;
+    color: #d1d5db;
+}
+
+footer > section:nth-child(2) > h6 {
+    font-size: 0.75rem;
+}
