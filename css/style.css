@@ -244,19 +244,126 @@ header menu a {
 
 /** About Secction **/
 .home .about {
-    background: url('../img/about us.jpg');
+    background: linear-gradient(#000000bf, #000000bf), url('../img/about us.jpg');
+    background-position: bottom;
     color: #ffffff;
     text-align: center;
-    padding: 3rem;
+    padding: 9rem 3rem;
 }
 
 .home .about h3 {
     color: white;
     font-size: 3.75rem;
+    margin-bottom: 7rem;
 }
 
 .home .about h3 > span {
     color: #f9c75c;
+}
+
+.home .about > div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.home .about > div > div {
+    width: 8rem;
+}
+
+.home .about > div > div > i {
+    color: #f9c75c;
+    font-size: 3.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.home .about > div > div > p {
+    color: #ffffff;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+/** Promotion Section **/
+
+.home .promo {
+    display: flex;
+    justify-content: center;
+    padding: 9rem 3rem;
+    gap: 2rem;
+    font-weight: bold;
+}
+
+.home .promo img {
+    width: 100%;
+    height: auto;
+}
+
+.home .promo > div {
+    width: 50%;
+    display: flex;
+}
+
+.home .promo > div > div {
+    padding: 3rem;
+}
+
+.home .promo > div > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem; 
+}
+
+.home .promo > div > div:nth-child(2) > p:nth-child(1) {
+    font-size: 1.875rem;
+}
+
+.home .promo > div > div:nth-child(2) > p:nth-child(2) {
+    display: flex;
+    align-items: flex-start;
+}
+
+.home .promo > div > div:nth-child(2) a {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.home .promo > div > div:nth-child(2) > p:nth-child(2) > span:nth-child(1) {
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+}
+
+.home .promo > div > div:nth-child(2) > p:nth-child(2) > span:nth-child(2) {
+    font-size: 6rem;
+    line-height: 1;
+}
+
+.home .promo > div:nth-child(1) {
+    background-color: #73efb4;
+}
+
+.home .promo > div:nth-child(2) {
+    background-color: #ed5068;
+}
+
+/** Aside **/
+aside h4 {
+    text-align: center;
+    font-size: 4.5rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+aside img {
+    width: 100%;
+    height: auto;
+}
+
+aside > div {
+    display: flex;
+}
+
+aside > div > div {
+    width: 20%;
 }
 
 /** Footer **/
