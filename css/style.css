@@ -1,5 +1,5 @@
 /** Global **/
-body, menu, input, p, a, h1, h2, h3, h4, h5, h6 {
+body, menu, input, textarea, p, a, h1, h2, h3, h4, h5, h6 {
     font-family: "Roboto", sans-serif;
     margin: 0;
     text-decoration: none;
@@ -8,13 +8,13 @@ body, menu, input, p, a, h1, h2, h3, h4, h5, h6 {
 }
 
 /** Header **/
-header > section:nth-child(2) {
+header > section:nth-child(3) {
     height: 10rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 2px solid #d1d5db;
-    gap: 5rem;
+    gap: 2rem;
     padding-bottom: 1rem;
     margin: 1rem 3rem;
 }
@@ -65,13 +65,45 @@ header > section > div:nth-child(3) i {
     margin-bottom: 0.5rem;
 }
 
+/** Tablet **/
+@media screen and (max-width: 768px) {
+    header > section:nth-child(2) {
+        gap: 2rem;
+    }
+}
+
+/** Mobile **/
+@media screen and (max-width: 425px) {
+    header > section:nth-child(3) {
+        height: 8rem;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 0;
+        margin: 1rem;
+        align-items: flex-start;
+    }
+
+    header > section div:nth-child(1), header > section img {
+        height: 73%;
+    }
+
+    header > section > label {
+        width: 65%;
+    }
+
+    .category {
+        justify-content: space-around;
+        margin: 1.5rem 1rem;
+    }
+}
+
 /** Navigation Header **/
 header nav {
     height: 4rem;
     background-color: #12005e;
 }
 
-header menu {
+header .desktop-nav menu {
     height: 100%;
     list-style: none;
     display: flex;
@@ -80,9 +112,99 @@ header menu {
     gap: 8rem;
 }
 
-header menu a {
+header .desktop-nav  menu a {
     color: white;
     text-decoration: none;
+}
+
+header .mobile-nav {
+    display: none;
+}
+
+header .mobile-nav > div {
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .mobile-nav input {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+}
+
+header .mobile-nav span {
+    position: absolute;
+    width: 2rem;
+    height: 0.25rem;
+    background: #ffffff;
+    border-radius: 3px;
+    transition: all .25s linear;
+    transform: rotate(0);
+}
+
+header .mobile-nav span:nth-child(2) {
+    top: 1.25rem;
+}
+
+header .mobile-nav span:nth-child(4) {
+    bottom: 1.25rem;
+}
+
+header .mobile-nav input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg);
+    top: 45%;
+}
+
+header .mobile-nav input:checked ~ span:nth-child(3) {
+    opacity: 0;
+}
+
+header .mobile-nav input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg);
+    bottom: 50%;
+}
+
+header .mobile-nav menu {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    background-color: #12005e;
+    list-style: none;
+    padding: 0;
+    top: -400%;
+    transition: all .25s linear;
+}
+
+header .mobile-nav input:checked ~ menu {
+    top: 100%;
+}
+
+header .mobile-nav menu li {
+    padding: 1rem;
+}
+
+header .mobile-nav menu li:hover {
+    background-color: #b6cee6;;
+}
+
+header .mobile-nav a {
+    color: #ffffff;
+}
+
+/** Tablet **/
+@media screen and (max-width: 768px) {
+    header .desktop-nav {
+        display: none;
+    }
+
+    header .mobile-nav {
+        display: block;
+    }
 }
 
 /** Main Homepage **/
@@ -186,6 +308,62 @@ header menu a {
 
 .home .hero .time span:nth-child(3) {
     font-size: 2.25rem;
+}
+
+/* Laptop */
+@media screen and (max-width: 1024px) {
+    .home .hero > div > div:nth-child(1) > div > div > span:nth-child(2) {
+        font-size: 2.75rem;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    .home .hero h2 {
+        font-size: 2.75rem;
+    }
+
+    .home .hero > div > div:nth-child(1) > div > div {
+        padding: 0.25rem 1.5rem;
+    }
+
+    .home .hero > div > div:nth-child(1) > div > div > span:nth-child(1) {
+        font-size: 0.75rem;
+    }
+
+    .home .hero > div > div:nth-child(1) > div > div > span:nth-child(2) {
+        font-size: 1.75rem;
+    }
+
+    .home .hero > div > div:nth-child(2) > div {
+        width: 200px;
+    }
+
+    .home .hero > div > div:nth-child(2) > div > div {
+        padding: 0.625rem 1.25rem;
+        top: -2.75rem;
+        left: -3rem;
+    }
+
+    .home .hero > div > div:nth-child(2) > div > div > span:nth-child(2) a {
+        font-size: 2.75rem;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 425px) {
+    .home .hero {
+        padding: 2rem;
+    }
+
+    .home .hero > div {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .home .hero > div > div {
+        width: 100%;
+    }
 }
 
 /** Product section **/
@@ -441,4 +619,271 @@ footer > section:nth-child(2) {
 
 footer > section:nth-child(2) > h6 {
     font-size: 0.75rem;
+}
+
+/** Tablet **/
+@media screen and (max-width: 768px) {
+    footer > section:nth-child(1) {
+        height: 9rem;
+        padding: 1rem 0 1rem 0;
+        margin: 0 1rem;
+        align-items: flex-start;
+    }
+
+    footer h4 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    footer form input[type="email"] {
+        width: 13rem;
+    }
+}
+
+/** Mobile **/
+@media screen and (max-width: 425px) {
+    footer > section:nth-child(1) {
+        height: 16rem;
+        flex-wrap: wrap;
+        
+    }
+
+    footer > section:nth-child(1) > div:nth-child(1) {
+        height: 50%;
+    }
+
+    footer form {
+        width: 100%;
+    }
+
+    footer form input[type="email"] {
+        width: auto;
+    }
+}
+
+/** About us **/
+/** Hero section **/
+.heromaster {
+    height: 20rem;
+    background: linear-gradient(#00000080, #00000080), url('../img/about-us/about\ us.jpeg');
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heromaster > h1 {
+    color: #ffffff;
+    font-size: 5rem;
+}
+
+/** Main **/
+/** Our Story section **/
+.about .our-story {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    padding: 6rem;
+}
+
+.about .our-story img {
+    width: 100%;
+    height: auto;
+}
+
+.about .our-story > div > p:nth-child(1) {
+    font-weight: bold;
+    margin-bottom: 4rem;
+}
+
+.about .our-story > div > p:nth-child(3) {
+    line-height: 2rem;
+}
+
+.about .our-story > div > h2 {
+    font-size: 6rem;
+    margin-bottom: 4rem;
+}
+
+/** Testimonial **/
+.about .testimonial {
+    background-color: #f9c75c;
+    text-align: center;
+    padding: 6rem 3rem;
+}
+
+.about .testimonial > h3 {
+    font-size: 4.5rem;
+    margin-bottom: 6rem;
+}
+
+.about .testimonial i {
+    color: #ffffff;
+}
+
+.about .testimonial > div {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.about .testimonial > div > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: #fce9a6;
+    padding: 3.5rem 5.5rem;
+}
+
+.about .testimonial > div > div > p:nth-child(2) {
+    font-weight: bold;
+    line-height: 2rem;
+}
+
+.about .testimonial > div > div > p:nth-child(3) {
+    font-size: 1rem;
+}
+
+/** Game benefit **/
+.about .game-benefit {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    padding: 6rem;
+}
+
+.about .game-benefit img {
+    width: 100%;
+    height: auto;
+}
+
+.about .game-benefit > div > p:nth-child(1) {
+    font-weight: bold;
+    margin-bottom: 4rem;
+}
+
+.about .game-benefit > div > p:nth-child(3) {
+    line-height: 2rem;
+}
+
+.about .game-benefit > div > h2 {
+    font-size: 3.75rem;
+    margin-bottom: 4rem;
+}
+
+/** Contact page **/
+.contact .map {
+    text-align: center;
+    padding: 3rem;
+}
+
+.contact .form {
+    display: flex;
+}
+
+.contact .form h2 {
+    color: #ffffff;
+    font-size: 3.75rem;
+    margin-bottom: 4rem;
+}
+
+.contact .form label {
+    color: #ffffff;
+}
+
+.contact .form > div:nth-child(1) {
+    width: 60%;
+    background-color: #0a145a;
+    padding: 6rem 10rem 6rem 3rem;
+}
+
+.contact .form form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.contact .form form textarea {
+    resize: none; 
+    padding: 1.25rem;
+}
+
+.contact .form form > div:nth-child(1) {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.contact .form form > div:nth-child(3) {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact .form form > div:nth-child(1) > input {
+    width: 50%;
+    height: 1.5rem;
+    padding: 1.25rem;
+}
+
+.contact .form form input[type="checkbox"] {
+    width: 2rem;
+    height: 2rem;
+}
+
+.contact .form form input[type="submit"] {
+    width: fit-content;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1.25rem 2rem;
+    color: #0a145a;
+    transition: all 0.25s linear;
+    cursor: pointer;
+}
+
+.contact .form form input[type="submit"]:hover {
+    background-color: #b6cee6;
+    color: #ffffff;
+    border-color: #b6cee6;
+}
+
+.contact .form > div:nth-child(2) {
+    width: 40%;
+    background-color: #f9c75c;
+}
+
+.contact .form > div:nth-child(2) {
+    position: relative;
+    padding: 6rem 3rem;
+}
+
+.contact .form > div:nth-child(2) > div:nth-child(1) {
+    position: absolute;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 1.5rem 2.5rem;
+    top: 0;
+    right: 0;
+}
+
+.contact .form > div:nth-child(2) hr {
+    border: 1px solid #fbd35d;
+}
+
+.contact .form > div:nth-child(2) a {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.contact .form > div:nth-child(2) > div {
+    padding: 2rem 0;
+}
+
+.contact .form > div:nth-child(2) > div > p:first-child {
+    font-weight: bold;
+    font-size: 1.875rem;
+    margin-bottom: 2.5rem;
+}
+
+.contact .form > div:nth-child(2) > div:nth-child(3) > p {
+    margin-bottom: 1.25rem;
 }

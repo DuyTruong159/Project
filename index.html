@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head id="head">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Homepage</title>
     <meta name="description" content="Welcome to Board Games Shop">
     <meta name="robots" content="noindex, nofollow">
-    <!-- Aff Fonts -->
+    <!-- Add Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -17,53 +17,15 @@
     <link href="./css/style.css" rel="stylesheet">
     <!-- Add FontAwesome -->
     <script src="https://kit.fontawesome.com/4dbfaa32c4.js" crossorigin="anonymous"></script>
+    <!-- Add Jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Add Custom Js -->
+    <script src="./js/custom-js.js"></script>
 </head>
 
 <body>
     <!-- Header section -->
-    <header>
-        <nav>
-            <menu>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contact</a></li>
-            </menu>
-        </nav>
-        <section>
-            <div>
-                <a href="index.html"><img src="./img/logo.png" alt="Logo"></a>
-            </div>
-            <label>
-                <i class="fas fa-search"></i>
-                <input type="search" placeholder="Search">
-            </label>
-            <div>
-                <a href="#"><i class="fas fa-user"></i></a>
-                <a href="#"><i class="fas fa-shopping-cart"></i></a>
-            </div>
-        </section>
-        <section class="category">
-            <div>
-                <a href="#">
-                    <img src="./img/strategy.png" alt="Strategy board game">
-                    <p>Strategy</p>
-                </a>
-            </div>
-            <div>
-                <a href="#">
-                    <img src="./img/chess.png" alt="Family board game">
-                    <p>Family</p>
-                </a>
-            </div>
-            <div>
-                <a href="#">
-                    <img src="./img/abstract.png" alt="Negotiation board game">
-                    <p>Negotiation</p>
-                </a>
-            </div>
-        </section>
-    </header>
+    <header id="header"></header>
     <!-- Main section -->
     <main class="home">
         <section class="hero">
@@ -210,41 +172,7 @@
         </div>
     </aside>
     <!-- Footer section -->
-    <footer>
-        <section>
-            <div>
-                <a href="index.html"><img src="./img/logo.png" alt="logo"></a>
-            </div>
-            <div>
-                <h4>About us</h4>
-                <nav>
-                    <menu>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </menu>
-                </nav>
-            </div>
-            <div>
-                <h4>Shop All</h4>
-                <nav>
-                    <menu>
-                        <li><a href="#">Strategy</a></li>
-                        <li><a href="#">Chess</a></li>
-                        <li><a href="#">Abstract</a></li>
-                    </menu>
-                </nav>
-            </div>
-            <form action="somefile" method="post">
-                <label>Newsletter:</label>
-                <input type="email" placeholder="Email" required>
-                <input type="submit" value="Subcribe Now">
-            </form>
-        </section>
-        <section>
-            <h6>Truong Pham | HTML, CSS and Javascript Fundamentals - Georgian College | <span>&copy; 2024</span></h6>
-        </section>
-    </footer>
+    <footer id="footer"></footer>
 </body>
 
 </html>
