@@ -7,7 +7,9 @@
     <title>Contact</title>
     <meta name="description" content="Welcome to Board Games Shop">
     <meta name="robots" content="noindex, nofollow">
-    <!-- Aff Fonts -->
+    <!-- Add Favicon -->
+    <link rel="icon" type="image/x-icon" href="./img/logo.png">
+    <!-- Add Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -38,12 +40,12 @@
         <section class="form">
             <div>
                 <h2>Any Questions?</h2>
-                <form action="somefile" method="post">
+                <form action="somefile" method="post" id="contact">
                     <div>
                         <input name="name" placeholder="Your Name" type="text" required/>
                         <input name="email" placeholder="Your E-mail" type="email" required/>
                     </div>
-                    <textarea placeholder="Message" rows="6"></textarea>
+                    <textarea placeholder="Message" rows="6" required></textarea>
                     <div>
                         <input type="checkbox" name="agree" value="true" required/>
                         <label for="agree">I agree that my submitted data is being collected and stored.</label>
