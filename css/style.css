@@ -212,6 +212,9 @@ header .mobile-nav a {
 .home .hero {
     background-color: #12005e;
     padding: 4rem 3rem;
+    display: flex;
+    gap: 3rem;
+    overflow: hidden;
 }
 
 .home .hero h2 {
@@ -230,6 +233,7 @@ header .mobile-nav a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex: 0 0 100%;
 }
 
 .home .hero > div > div {
@@ -246,7 +250,7 @@ header .mobile-nav a {
     position: relative;
 }
 
-.home .hero > div > div:nth-child(2) > div > img {
+.home .hero > div > div:nth-child(2) > div > a img {
     width: 100%;
     height: auto;
 }
@@ -951,6 +955,10 @@ footer > section:nth-child(2) > h6 {
     padding: 3rem;
 }
 
+.contact .map iframe {
+    width: 100%;
+}
+
 .contact .form {
     display: flex;
 }
@@ -1298,7 +1306,7 @@ footer > section:nth-child(2) > h6 {
 }
 
 .product-item section:nth-child(1) > div:nth-child(1) > div {
-    width: 75%;
+    width: 65%;
 }
 
 .product-item section:nth-child(1) > div:nth-child(2) > p:nth-child(2){

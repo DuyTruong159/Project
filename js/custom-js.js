@@ -11,6 +11,17 @@ $(document).ready(function() {
         });
     });
 
+    //Slide in Homepage
+    setInterval(function() {
+        console.log('start');
+        $('.home .hero > div').each(function(index) {
+            $(".home .hero").animate({ scrollLeft: "3000" }, 2000).delay(2000);
+            if($(this).length - 1 == index) {
+                $(".home .hero").animate({ scrollLeft: -(index * 3000) }, 1000).delay(2000);
+            }
+        });
+    }, 500);
+
     //Handle Form in Contact page
     $('#contact').submit(function(e) {
         e.preventDefault();
@@ -36,6 +47,28 @@ $(document).ready(function() {
             } else {
                 $(this).parent().parent().css('display', 'block');
             }
+        });
+    });
+
+    //Filter Category in Shop page
+    $('.sidebar ul li').each(function() {
+        $(this).click(function(e) {
+            e.preventDefault();
+
+            var category = $(this).text();
+            $('.product > div > span').each(function() {
+                if(category == $(this).text()) {
+                    $(this).parent().css('display', 'block');
+                } else {
+                    $(this).parent().css('display', 'none');
+                }
+            });
+        });
+    });
+    //Show all back
+    $('.sidebar > div:first-child > h2').click(function() {
+        $('.product > div').each(function() {
+            $(this).css('display', 'block');
         });
     });
 
